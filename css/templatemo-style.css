@@ -204,7 +204,7 @@ header .social-icon li a
 /* start home */
 #home
 	{
-		background: url('../images/home-bg-new.jpg') no-repeat;
+		background: url('../images/new_bg.jpg') no-repeat;
 		background-size: cover;
 		padding-top: 150px;
 		padding-bottom: 100px;
@@ -607,3 +607,5 @@ header .social-icon li a
 #service .active { padding: 10px; }
 .fa-icon { display: inline-block; border: 1px solid #fff;}
 .high#light{ color :#28a7e9; font-weight: bold;}
+.logo img{ width: 60px; height: 60px; top: -8px; position: relative;}
+.errormsg{ color: red; display: none;}

@@ -67,7 +67,7 @@
 						<span class="icon icon-bar"></span>
 						<span class="icon icon-bar"></span>
 					</button>
-					<a href="index.html" class="navbar-brand">Logo</a>
+					<a href="index.html" class="navbar-brand logo"><img src="images/logo.png" alt="Logo"/></a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -87,7 +87,7 @@
     	<section id="home">
     		<div class="container">
     			<div class="row">
-    				<div class="col-md-offset-5 col-md-8">
+    				<div class="col-md-offset-6 col-md-8">
                         <h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">We're manufacturer and suppliers for high quality men shoes, wallets and Belts.<span></span></h1>
     					<div class="element">
                             <div class="sub-element">Hello, We are Ambur Leather Shoes!</div>
@@ -335,15 +335,18 @@
     					<h2 class="wow text-uppercase bounceIn" data-wow-offset="50" data-wow-delay="0.3s">contact us<span></span></h2>
     				</div>
     				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
-    					<form action="#" method="post">
+    					<form action="#" id="contact">
     						<label>NAME</label>
-    						<input name="fullname" type="text" class="form-control" id="fullname">
+                            <label class="errormsg">Please enter your name</label>
+    						<input name="fullname" type="text" class="form-control name" id="fullname">
    						  	
                             <label>EMAIL</label>
-    						<input name="email" type="email" class="form-control" id="email">
+                            <label class="errormsg">Please enter Valid Email</label>
+    						<input name="email" type="email" class="form-control email" id="email">
    						  	
                             <label>MESSAGE</label>
-    						<textarea name="message" rows="4" class="form-control" id="message"></textarea>
+                            <label class="errormsg">Please enter your Enquiry</label>
+    						<textarea name="message" rows="4" class="form-control msg" id="message"></textarea>
     						
                             <input type="submit" class="form-control">
     					</form>
@@ -374,7 +377,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-                       	Copyright &copy; 2017 HiWlak Shoes. All rights reserved.</p>
+                       	Copyright &copy; 2017 HiWalk Shoes. All rights reserved.</p>
                     </div>
                 </div>
             </div>

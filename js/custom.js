@@ -41,6 +41,57 @@ $(function(){
     /* end navigation top js */
 
     $('body').bind('touchstart', function() {});
+    
+    /* Form submit event */
+    $("#contact").on('submit', function(e){
+        var isValid;
+        
+        var formDetails = {
+            name : {
+                selector : '.name',
+                validationType : 'empty',
+                errorId : '#nameError',
+            },
+            email : {
+                selector : '.email',
+                validationType : 'email',
+                errorId : '#emailError',
+            },
+            msg : {
+                selector : '.msg',
+                validationType : 'empty',
+                errorId : '#msgError',
+            }
+        };
+        
+        isValid = validateForm([], formDetails);
+        if(isValid)
+            alert(true)
+        else
+            alert(false)
+    })
+    
+    function validateForm(arr, formdDetails){
+        arr = [];
+        
+        $.each(formdDetails, function(key, value){
+            console.log(value , key);
+            
+            if(value.validationType == 'empty'){
+                var val = $(value.selector).val();
+                (val == '') ? arr.push(true) : arr.push(false);
+            } else if(value.validationType == 'email'){
+                var val = $(value.selector).val();
+                var mailformat =  /^[a-z0-9!#$%&'"*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&*+/=?^_`{|}~-]+)*@(?:[a-z0-9[](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[a-zA-Z0-9]{2}|([0-9]{3}]*)|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)$/;			
+                
+                (val.match(mailformat)) ? arr.push(true) : arr.push( false );                
+                
+            }
+            
+            return arr;
+        })
+        
+    }
 
     /* wow
     -----------------*/
@@ -52,3 +103,7 @@ $(window).load(function(){
 	$('.preloader').fadeOut(1000); // set duration in brackets    
 });
 /* end preloader */
+
+
+
+
